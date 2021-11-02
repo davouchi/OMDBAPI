@@ -1,0 +1,36 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Search Movie Titles</h1>
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form onsubmit="return false;" method="post">
+
+                <fieldset class="form-group">
+
+                    <input type="text" class="form-control" id="movName" name="movName"
+                           placeholder="Enter Movie Name">
+
+                </fieldset>
+
+                <div>
+
+                    <button type="submit" class="btn btn-primary" onclick="quickSearch();">Search</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <div id="searchResults">
+
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/js/site.js"></script>
